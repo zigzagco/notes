@@ -7,47 +7,111 @@
     android:fitsSystemWindows="true"
     tools:context=".ListActivity.AddNotesActivity">
 
-    <Button
-        android:id="@+id/button"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayoutadd">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/addTitleId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:autofillHints=""
+                android:background="@null"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="start|top"
+                android:hint="@string/Name"
+                android:imeOptions="actionGo|actionNext"
+                android:inputType="textMultiLine"
+                android:overScrollMode="never"
+                android:scrollHorizontally="false"
+                android:text=""
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/addTextId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@null"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/Text"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:isScrollContainer="false"
+                android:scrollHorizontally="false"
+                android:singleLine="false"
+                android:text=""
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayoutadd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:insetTop="6dp"
-        android:insetBottom="0dp"
-        android:onClick="onClickSave"
-        android:text="Сохранить"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:elevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/idTitle"
-        android:layout_width="412dp"
-        android:layout_height="90dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/idText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.177" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/idText"
-        android:layout_width="410dp"
-        android:layout_height="589dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.661" />
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbaradd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/topBar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button3"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+                android:background="@null"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:onClick="onClickBack"
+                android:stateListAnimator="@null"
+                app:backgroundTint="#00FFFFFF"
+                app:icon="?attr/homeAsUpIndicator"
+                app:iconTint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/toolbaradd"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/toolbaradd"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="OnClick"
+                tools:targetApi="lollipop" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

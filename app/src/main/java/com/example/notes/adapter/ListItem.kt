@@ -1,7 +1,14 @@
 package com.example.notes.adapter
 
-class ListItem {
-    private var title: String? = null
+import android.widget.Toast
+
+
+
+
+class ListItem(){
+
+
+    /*private var title: String? = null
     private var content: String? = null
 
     fun getTitle(): String? {
@@ -18,7 +25,15 @@ class ListItem {
 
     fun setContent(content: String?) {
         this.content = content
-    }
+    }*/
+    var id:String = "empty"
+    var title:String = "empty"
+    var content:String = "empty"
+    var time:String = "empty"
+    var bool:String = "empty"
+
 
 }
+
+
 

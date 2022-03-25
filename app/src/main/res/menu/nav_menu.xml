@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/search_menu"
+        android:icon="@drawable/ic_search"
+        android:checkable="false"
+        android:title="@string/search"/>
+    <item
+        android:icon="@drawable/ic_baseline_add_24"
+        android:id="@+id/add_menu"
+        android:checkable="false"
+        android:title="@string/add" />
+    <item
+        android:id="@+id/activitySettings"
+        android:icon="@drawable/ic_settings"
+        android:checkable="false"
+        android:title="@string/settings"/>
 
 </menu>

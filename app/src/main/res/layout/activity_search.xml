@@ -4,4 +4,84 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListActivity.ActivitySearch"/>
+    tools:context=".ListActivity.ActivitySearch">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayoutadd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbaradd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/materialYelow"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/sample_editText"
+                android:layout_width="342dp"
+                android:layout_height="0dp"
+                android:autofillHints=""
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:hint="Поиск"
+                android:inputType="textPersonName"
+                android:paddingStart="10dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.623"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/button3"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="36dp"
+                android:layout_height="56dp"
+                android:background="@null"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:onClick="onClickBack"
+                android:stateListAnimator="@null"
+                app:backgroundTint="#00FFFFFF"
+                app:icon="?attr/actionModeCloseDrawable"
+                app:iconTint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/addTextId"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/toolbaradd"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:targetApi="lollipop" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sample_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#F2F2F7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayoutadd" />
+</androidx.constraintlayout.widget.ConstraintLayout>
